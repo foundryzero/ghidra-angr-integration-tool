@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="img/GAIT-logo.png" alt="ghidra angr integration tool logo" height=200/>
+</p>
+
 # Ghidra Angr Integration Tool
 
 A plugin for Ghidra that provides access to the robust angr toolkit. This enables rapid, versatile, interactive symbolic
@@ -9,7 +13,7 @@ execution of binaries.
 
 ## 🔧 Requirements
 
-- python >= 3.10 (currently untested on older versions)
+- python >= 3.12 (currently untested on older versions)
 - angr >= 9.2.117 (older versions will fail!)
 - Ghidra 11.1.1
 
