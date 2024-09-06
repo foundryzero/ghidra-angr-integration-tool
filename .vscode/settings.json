@@ -1,0 +1,26 @@
+{
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.typeCheckingMode": "off", // disable pylance type hinting, when mypy does a better job
+    "python.analysis.extraPaths": [
+        "./plugin/AngrIntegration/data/architectures"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        },
+    },
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "mypy-type-checker.args": [
+        "--disallow-untyped-calls",
+        "--disallow-untyped-defs",
+        "--strict",
+        "--untyped-calls-exclude=angr",
+    ],
+    "black-formatter.args": ["--line-length=120"],
+    "autoDocstring.docstringFormat": "sphinx-notypes"
+}

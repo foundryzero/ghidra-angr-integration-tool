@@ -1,0 +1,9 @@
+services:
+    build.service:
+        build: "."
+        volumes:
+           - "./plugin/AngrIntegration:/home/gradle/ghidra-angr-integration-tool"
+           - "./LICENSE:/home/gradle/ghidra-angr-integration-tool/LICENSE"
+        environment:
+           GHIDRA_VERSION: "${GHIDRA_VERSION}"
+        working_dir: "/home/gradle/ghidra-angr-integration-tool"
