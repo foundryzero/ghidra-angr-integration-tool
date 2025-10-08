@@ -572,8 +572,9 @@ def register_simproc_hook(p: angr.Project, hook: dict[str, Any]) -> None:
 
     p.hook(target, CreatedSimProcedure())
 
-
-def eval_args(args_list: list[Any], solver: angr.state_plugins.SimSolver) -> list[claripy.BV]:
+# Edit: changed to fix ghidra's error displayed in issue #1 (https://github.com/foundryzero/ghidra-angr-integration-tool/issues/1)
+# def eval_args(args_list: list[Any], solver: angr.state_plugins.SimSolver) -> list[claripy.BV]:
+def eval_args(args_list: list[Any], solver: angr.state_plugins.SimSolver) -> list[claripy.BVS]:
     sym_list = []
     for i, arg in enumerate(args_list):
         sym_list.append(symbolic_field.eval_sym(arg["code"], arg["width"], arg["name"], solver))
